@@ -40,3 +40,19 @@ const moviePlaceHolder = ()=>{
         })
 
     }
+    const movieDetails = ()=>{
+        fetch(url)
+        .then(response=>response.json())
+        .then(data=>{
+            console.log(data)
+            for(let i = 0; i < data.length; i++){
+                let item = data[i]
+                console.log(item)
+                const movieList = document.createElement("li")
+                const list = document.getElementById("allmovies")
+
+                movieList.classList.add("list-group-item", "border", "border-info")
+
+                movieList.setAttribute('id',`${item.id}`)
+                movieList.innerText = item.title
+                console.log(item.title)
