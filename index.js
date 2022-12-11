@@ -22,3 +22,21 @@ const moviePlaceHolder = ()=>{
 
             const ticketBuy = document.getElementById("buyTicket")
             let tickets = Number(firstMovie.capacity - firstMovie.tickets_sold)
+            ticketBuy.addEventListener('click',()=>{
+
+                tickets--
+
+
+                if(tickets <= 0){
+                    const frstMovie = document.getElementById("1")
+                    frstMovie.innerHTML=`${firstMovie.title}  <span class="badge bg-danger me-1">SOLD OUT</span>`
+
+                    availTicket.innerHTML = `Ticketd available:  <span class="badge bg-danger">SOLD OUT</span>`
+                }else{
+                    availTicket.innerText = `Tickets available: (${tickets})`
+                }
+            })
+
+        })
+
+    }
