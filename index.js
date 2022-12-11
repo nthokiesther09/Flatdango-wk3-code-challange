@@ -65,12 +65,45 @@ const moviePlaceHolder = ()=>{
                     const runTime = document.getElementById("runtime")
                     const showTime = document.getElementById("showtime")
                     const availTickets =document.getElementById("ticketsAvailable")
-                    
+
                     filmImage.src = item.poster
                     filmTitle.innerText = item.title
                     filmDescr.textContent = item.decription
                     runTime.innerHTML =`Runtime:<span>${item.runtime}</span>`
                     showTime.innerText =`Showtime: ${item.showtime}`
                     availTickets.innerText =`Tickets available: (${item.capacity - item.tickets_sold})`
+
+                    ticketsBuy.addEventListener('click',()=>{
+
+                        ticket --
+                        if(ticket <= 0){
+                            movieList.innerHTML =`${item.title} <span class="badge bg-danger">SOLD OUT</span>`
+
+                            availTickets.innerHTML = `Tickets available: <span class="badge bg-danger">SOLD OUT</span>`
+
+                        }else{
+
+                            availTickets.innerText = `Tickets available: (${ticket})`
+                        }
+                       
+                    })
+
+
+
+                })
+
+
+            }
+
+
+
+
+        })
+
+    }
+
+    movieDetails()
+    moviePlaceHolder()
+
 
 
