@@ -56,3 +56,13 @@ const moviePlaceHolder = ()=>{
                 movieList.setAttribute('id',`${item.id}`)
                 movieList.innerText = item.title
                 console.log(item.title)
+                list.appendChild(movieList)
+
+                movieList.addEventListener('click',()=>{
+                    const filmImage = document.getElementById("poster")
+                    const filmTitle = document.getElementById("filmTitle")
+                    const filmDescr = document.getElementById("movieDescription")
+                    const runTime = document.getElementById("runtime")
+                    const showTime = document.getElementById("showtime")
+                    const availTickets =document.getElementById("ticketsAvailable")
+
