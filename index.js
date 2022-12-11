@@ -12,3 +12,13 @@ const moviePlaceHolder = ()=>{
         const runningTime = document.getElementById("runtime")
         const showingTime = document.getElementById("showtime")
         const availTicket =document.getElementById("ticketsAvailable")
+        filmImg.src = firstMovie.poster
+            movieTitle.innerText = firstMovie.title
+            movieDescr.textContent = firstMovie.decription
+            runningTime.innerText =`Runtime: ${firstMovie.runtime} minutes`
+            showingTime.innerText =`Showtime: ${firstMovie.showtime}`
+            availTicket.innerText =`Tickets Available: (${firstMovie.capacity - firstMovie.tickets_sold})`
+
+
+            const ticketBuy = document.getElementById("buyTicket")
+            let tickets = Number(firstMovie.capacity - firstMovie.tickets_sold)
