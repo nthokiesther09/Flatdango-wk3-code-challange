@@ -1,0 +1,22 @@
+{
+  "name": "flatdango-wk3-code-challange",
+  "version": "1.0.0",
+  "description": "(Movie theater app that allows users to purchase movie tickets)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nthokiesther09/Flatdango-wk3-code-challange.git"
+  },
+  "keywords": [
+    "(movie)"
+  ],
+  "author": " (Esther Musyoka)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nthokiesther09/Flatdango-wk3-code-challange/issues"
+  },
+  "homepage": "https://github.com/nthokiesther09/Flatdango-wk3-code-challange#readme"
+}
