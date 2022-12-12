@@ -7,17 +7,17 @@ const moviePlaceHolder = ()=>{
         const firstMovie = content[0]
 
         const filmImg = document.getElementById("poster")
-        const movieTitle = document.getElementById("filmTitle")
+        const movieTitle = document.getElementById("movieTitle")
         const movieDescr = document.getElementById("movieDescription")
         const runningTime = document.getElementById("runtime")
         const showingTime = document.getElementById("showtime")
-        const availTicket =document.getElementById("ticketsAvailable")
+        const availableTicket =document.getElementById("ticketsAvailable")
         filmImg.src = firstMovie.poster
             movieTitle.innerText = firstMovie.title
             movieDescr.textContent = firstMovie.decription
             runningTime.innerText =`Runtime: ${firstMovie.runtime} minutes`
             showingTime.innerText =`Showtime: ${firstMovie.showtime}`
-            availTicket.innerText =`Tickets Available: (${firstMovie.capacity - firstMovie.tickets_sold})`
+            availableTicket.innerText =`Tickets Available: (${firstMovie.capacity - firstMovie.tickets_sold})`
 
 
             const ticketBuy = document.getElementById("buyTicket")
@@ -31,9 +31,9 @@ const moviePlaceHolder = ()=>{
                     const frstMovie = document.getElementById("1")
                     frstMovie.innerHTML=`${firstMovie.title}  <span class="badge bg-danger me-1">SOLD OUT</span>`
 
-                    availTicket.innerHTML = `Ticketd available:  <span class="badge bg-danger">SOLD OUT</span>`
+                    availableTicket.innerHTML = `Ticketd available:  <span class="badge bg-danger">SOLD OUT</span>`
                 }else{
-                    availTicket.innerText = `Tickets available: (${tickets})`
+                    availableTicket.innerText = `Tickets available: (${tickets})`
                 }
             })
 
@@ -60,18 +60,18 @@ const moviePlaceHolder = ()=>{
 
                 movieList.addEventListener('click',()=>{
                     const filmImage = document.getElementById("poster")
-                    const filmTitle = document.getElementById("filmTitle")
+                    const filmTitle = document.getElementById("movieTitle")
                     const filmDescr = document.getElementById("movieDescription")
                     const runTime = document.getElementById("runtime")
                     const showTime = document.getElementById("showtime")
-                    const availTickets =document.getElementById("ticketsAvailable")
+                    const availableTickets =document.getElementById("ticketsAvailable")
 
                     filmImage.src = item.poster
                     filmTitle.innerText = item.title
                     filmDescr.textContent = item.decription
                     runTime.innerHTML =`Runtime:<span>${item.runtime}</span>`
                     showTime.innerText =`Showtime: ${item.showtime}`
-                    availTickets.innerText =`Tickets available: (${item.capacity - item.tickets_sold})`
+                    availableTickets.innerText =`Tickets available: (${item.capacity - item.tickets_sold})`
 
                     ticketsBuy.addEventListener('click',()=>{
 
@@ -79,11 +79,11 @@ const moviePlaceHolder = ()=>{
                         if(ticket <= 0){
                             movieList.innerHTML =`${item.title} <span class="badge bg-danger">SOLD OUT</span>`
 
-                            availTickets.innerHTML = `Tickets available: <span class="badge bg-danger">SOLD OUT</span>`
+                            availableTickets.innerHTML = `Tickets available: <span class="badge bg-danger">SOLD OUT</span>`
 
                         }else{
 
-                            availTickets.innerText = `Tickets available: (${ticket})`
+                            availableTickets.innerText = `Tickets available: (${ticket})`
                         }
                        
                     })
