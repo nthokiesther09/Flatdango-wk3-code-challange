@@ -1,18 +1,47 @@
-#filmTitle{
+#movieTitle{
   text-align: center;
+  font-style: italic;
+  font-weight: bolder ;
+  
 }
 
 body{
-  background-color: rgb(43, 18, 59);
+  background-color: black;
 }
 
 #showingTitle{
+  font-style: oblique;
+  font-family: cursive;
+  font-weight: bolder;
   text-align: center;
 
 }
 #headTitle{
+  font-family: "Great Vibes", cursive;
+  font-size: 52px;
   text-align: center;
+  font-style: italic;
+  
 }
-#mviedet{
+/* h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 52px;
+  margin: 10px 0;
+} */
+.primary{
+  color: crimson;
+}
+#moviedetails{
   list-style: none;
+}
+.list-group{
+  font-family:"Great Vibes", cursive;
+ font-weight: bolder;
+ font-style: oblique;
+}
+.text-light{
+  font-style: oblique;
+}
+.navbar {
+  background-color: black;
 }
